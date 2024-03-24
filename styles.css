@@ -1,0 +1,261 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+body {
+  height: 100vh;
+  color: #737373;
+  background-color: #fff8e2;
+  background-image: url(assets/background-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.flex {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 80px;
+}
+.profile {
+  width: 200px;
+  background-color: #fff;
+  padding: 5px;
+  clip-path: circle(105px);
+}
+.logo {
+  scale: 0;
+  width: 65px;
+  position: relative;
+  left: -65px;
+  top: -10px;
+  transition: all 1s;
+  transform: rotate(-360deg);
+}
+.logo.spin-in {
+  scale: 1;
+  transform: rotate(0deg);
+}
+.logo:hover {
+  transform: scale(1.1);
+  transform: rotate(360deg);
+}
+h1 {
+  font-size: 3rem;
+  color: #b5596d;
+  margin: 0;
+}
+h2 {
+  font-size: 2rem;
+  color: #b5596d;
+  margin: 0;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.socials-front {
+  opacity: 1;
+  transition: opacity 0.5s;
+  margin-left: -10px;
+}
+.socials-front img {
+  opacity: 0.9;
+  width: 45px;
+  margin: 20px 10px;
+  transition: all 0.25s;
+}
+.socials-front a:hover img,
+.socials-front a:active img,
+.socials-front a:focus img {
+  opacity: 1;
+  width: 51px;
+  margin: 0px 7px 14px 7px;
+}
+.card {
+  height: 1145px;
+  width: 750px;
+  perspective: 1000px;
+}
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+}
+.card-inner.is-flipped {
+  transform: rotateY(180deg);
+  margin-left: 230px;
+}
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  margin: 70px;
+  padding: 45px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+.floral {
+  display: flex;
+  align-items: center;
+  color: #737373;
+  text-decoration: none;
+  border-radius: 15px;
+}
+.floral:active,
+.floral:hover,
+.floral:focus {
+  background-color: #fff9f3;
+}
+.floral div:first-child {
+  margin: 30px;
+}
+h3 {
+  font-size: 1.75rem;
+  color: #ec879c;
+}
+p {
+  font-size: 1.25rem;
+}
+#back {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: rotateY(180deg);
+}
+.center {
+  text-align: center;
+}
+.socials-back a {
+  display: flex;
+  align-items: center;
+  color: #b5596d;
+  text-decoration: none;
+  font-size: 3rem;
+  border-radius: 15px;
+}
+.socials-back a:hover,
+.socials-back a:active,
+.socials-back a:focus {
+  background-color: #fff9f3;
+}
+.socials-back img {
+  width: 75px;
+  margin: 25px;
+}
+.contact {
+  display: flex;
+  padding: 30px;
+  border: 5px solid #f3f3f3;
+  border-radius: 15px;
+  margin: 30px 0;
+}
+.contact img {
+  width: 300px;
+}
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 50px;
+}
+.contact-details p {
+  font-size: 1.75rem;
+  margin: 0;
+}
+small {
+  font-size: 1.1rem;
+}
+#flip-icon {
+  width: 75px;
+  background-color: #ca6d81;
+  padding: 30px;
+  border-radius: 15px;
+  position: absolute;
+  bottom: 405px;
+  right: 30px;
+}
+.hidden {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+@media (min-width: 1020px) {
+  body {
+    background-image: url(assets/background-desktop.png);
+  }
+  .flex {
+    margin: 40px 40px 0 40px;
+  }
+  .profile {
+    width: 160px;
+    clip-path: circle(84px);
+  }
+  .flex-2 {
+    width: 920px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  #front {
+    display: flex;
+  }
+  .floral {
+    flex-basis: fit-content;
+    flex-direction: column;
+  }
+  .floral div:first-child {
+    margin: 30px 0 0 0;
+  }
+  .floral img {
+    width: 220px;
+  }
+  .floral div:nth-child(2) {
+    margin: 0 30px;
+  }
+  .card {
+    margin-top: 0;
+    height: 460px;
+    width: 1200px;
+  }
+  .center {
+    display: none;
+  }
+  #back {
+    flex-direction: row;
+  }
+  .socials-back a {
+    font-size: 2rem;
+  }
+  .socials-back img {
+    width: 50px;
+    margin: 23px;
+  }
+  .contact {
+    margin-left: 100px;
+    height: 245px;
+  }
+  .contact img {
+    width: 250px;
+  }
+  .contact-details {
+    margin: 0 50px;
+  }
+  #flip-icon {
+    top: 740px;
+    right: 40px;
+    width: 50px;
+    padding: 20px;
+  }
+}
